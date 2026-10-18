@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>단톡방 낚시 게임 - 업데이트 패치노트</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --accent-color: #4da3ff;
+      --text-main: #e0e0e0;
+      --text-sub: #a0a0a0;
+      --border-color: #333333;
+      --tag-bg: #2a3b4c;
+      --tag-text: #70baff;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      padding: 16px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      padding: 24px 0 20px;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    header p {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+    }
+    /* 최신 패치 카드 */
+    .latest-card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-color);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .badge-latest {
+      display: inline-block;
+      background: #ff4757;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+    .version-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .date {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      margin-bottom: 14px;
+    }
+    .content h3 {
+      font-size: 1rem;
+      color: var(--accent-color);
+      margin: 14px 0 6px 0;
+      border-left: 3px solid var(--accent-color);
+      padding-left: 8px;
+    }
+    .content ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .content li {
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+    }
+    /* 과거 내역 아코디언 */
+    details {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    summary {
+      padding: 14px 16px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #242424;
+      font-size: 0.95rem;
+    }
+    summary:hover {
+      background-color: #2c2c2c;
+    }
+    details .inner-content {
+      padding: 16px;
+      border-top: 1px solid var(--border-color);
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      margin-top: 30px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>🎣 낚시터 업데이트 로그</h1>
+      <p>단톡방 낚시 시스템의 모든 변경 내역을 기록합니다.</p>
+    </header>
+
+    <!-- 1. 최신 업데이트 (펼쳐진 상태로 상단 노출) -->
+    <div class="latest-card">
+      <span class="badge-latest">LATEST</span>
+      <div class="version-title">v4.0.0 대규모 밸런스 패치 & 팀전 도입</div>
+      <div class="date">적용일: 2026.10.19</div>
+      <div class="content">
+        <h3>1. 신규 시스템 & 규칙</h3>
+        <ul>
+          <li>주간 팀 대항전 모드(청룡팀 vs 백호팀) 공식 지원</li>
+          <li>특성 선택지 리롤 기능 추가 (시즌당 3회 부여)</li>
+          <li>특성 선택 대기 시 낚시 차단 안전장치 도입</li>
+        </ul>
+
+        <h3>2. 특성 밸런스 조정</h3>
+        <ul>
+          <li><strong>#08 업사이클링 장인:</strong> 쓰레기 획득 시 500점 계정 즉시 적립 및 노랑/빨강 미끼 각 1회 지급</li>
+          <li><strong>#27 잭팟 슬롯:</strong> 3연속 숫자 일치 시 1,500점 및 월척 게이지 20pt 지급</li>
+          <li><strong>#37 판도라의 상자:</strong> 대박 보너스 700점 상향</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2. 과거 업데이트 (접이식 아코디언 - 길이가 길어져도 깔끔함) -->
+    <h2 style="font-size: 1.1rem; margin: 20px 0 10px 4px; color: #fff;">📜 지난 업데이트 내역</h2>
+
+    <details>
+      <summary>
+        <span>v3.5.0 월척의 꿈 게이지 도입</span>
+        <span style="font-size: 0.8rem; color: #aaa;">2026.10.12</span>
+      </summary>
+      <div class="inner-content content">
+        <ul>
+          <li>A~E등급 소프트 캡 차감분의 3%를 [월척의 꿈] 게이지로 적립</li>
+          <li>100pt 도달 시 다음 낚시 S등급 이상 확정</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>
+        <span>v3.0.0 52종 특성 개화 시스템</span>
+        <span style="font-size: 0.8rem; color: #aaa;">2026.10.05</span>
+      </summary>
+      <div class="inner-content content">
+        <ul>
+          <li>물고기 15마리 포획 시마다 특성 3지선다 개화</li>
+          <li>시즌당 최대 3개 특성 장착 가능</li>
+        </ul>
+      </div>
+    </details>
+
+    <footer>
+      © 낚시터 봇 시스템 All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
